@@ -6,6 +6,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\InvitacionController;
+use App\Http\Controllers\DesignController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,7 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/invitacion/{id}', [InvitacionController::class, 'mostrarInvitacion'])->name('invitacion.update');
     Route::resource('invitacion', InvitacionController::class);
+    Route::get('/design', [DesignController::class, 'index'])->name('design.index');
     
 
     
